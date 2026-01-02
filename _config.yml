@@ -1,0 +1,3 @@
+#select theme
+theme: jekyll-theme-minimal # for github supported theme, replacing THEME-NAME with the name of the theme as shown in the _config.yml of the theme's repository. 
+#remote_theme: THEME-NAME #for other theme hosted on github, replacing THEME-NAME with the name of the theme as shown in the README of the theme's repository. 
