@@ -1,3 +1,24 @@
 #select theme
-theme: jekyll-theme-minimal # for github supported theme, replacing THEME-NAME with the name of the theme as shown in the _config.yml of the theme's repository. 
-#remote_theme: THEME-NAME #for other theme hosted on github, replacing THEME-NAME with the name of the theme as shown in the README of the theme's repository. 
+#theme: jekyll-text-theme, just-the-docs, minimal-mistakes-jekyll # for github supported theme, replacing THEME-NAME with the name of the theme as shown in the _config.yml of the theme's repository. 
+#remote_theme: alertbox/bookworm, sighingnow/jekyll-gitbook, jasongrimes/jekyll-chapterbook #for other theme hosted on github, replacing THEME-NAME with the name of the theme as shown in the README of the theme's repository. 
+plugins:
+  - jekyll-remote-theme
+
+title: "Freedom Highway" #[The title of your site]
+description: "A repository of information" #[A short description of your site's purpose]
+
+#the site will probably be organised by way of jekyll collections, which correspond to folders in the git repository, give or take some
+#collections:
+#  tutorials:
+#    order:
+#      - hello-world.md
+#      - introduction.md
+#      - concepts/basics.md
+#      - concepts/advanced.md
+#OR
+#collections:
+#  tutorials:
+#    sort_by: lesson
+#WHERE "lesson" is a front matter metadata in the page
+
+#just-the-docs supports multiple layouts. modify _layouts/home.html to be a parent layout (like the default layout) to render the markup from the other theme.
