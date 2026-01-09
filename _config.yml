@@ -1,5 +1,5 @@
 #select theme
-#theme: jekyll-text-theme, just-the-docs, minimal-mistakes-jekyll # for github supported theme, replacing THEME-NAME with the name of the theme as shown in the _config.yml of the theme's repository. 
+theme: jekyll-text-theme #, just-the-docs, minimal-mistakes-jekyll # for github supported theme, replacing THEME-NAME with the name of the theme as shown in the _config.yml of the theme's repository. 
 #remote_theme: alertbox/bookworm, sighingnow/jekyll-gitbook, jasongrimes/jekyll-chapterbook #for other theme hosted on github, replacing THEME-NAME with the name of the theme as shown in the README of the theme's repository. 
 plugins:
   - jekyll-remote-theme
