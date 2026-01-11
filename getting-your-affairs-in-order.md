@@ -1,3 +1,8 @@
+---
+title: Getting your affairs in order
+pagenum: 1
+---
+
 # Getting your affairs in order
 
 ## Wills and POAs
