@@ -4,44 +4,29 @@ remote_theme: adamrehn/jekyll-theme-gitbook@v0.0.6 #, alertbox/bookworm, sighing
 plugins:
   - jekyll-remote-theme
 
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude: [".gitignore", "LICENSE", "README.md"]
+sass:
+  style: compressed
+
 title: "Freedom Highway" #[The title of your site]
 description: "A repository of information" #[A short description of your site's purpose]
 
-#the site will probably be organised by way of jekyll collections, which correspond to folders in the git repository, give or take some
-#collections:
-#  tutorials:
-#    order:
-#      - hello-world.md
-#      - introduction.md
-#      - concepts/basics.md
-#      - concepts/advanced.md
-#OR
-#collections:
-#  tutorials:
-#    sort_by: lesson
-#WHERE "lesson" is a front matter metadata in the page
-#just-the-docs supports multiple layouts. modify _layouts/home.html to be a parent layout (like the default layout) to render the markup from the other theme.
-
 #adamrehn theme config
 theme-settings:
-  # The name of the Jekyll collection that contains the site's chapters (REQUIRED)
-  collection: "categories"
-  # Navigation menu settings (OPTIONAL, only needed if you want to override the defaults)
-  navigation:
+  collection: "categories" # The name of the Jekyll collection that contains the site's chapters (REQUIRED)
+  navigation: # Navigation menu settings (OPTIONAL, only needed if you want to override the defaults)
     # Specifies whether navigation links should be generated for chapter index files that use the `chapter-index` layout (OPTIONAL, defaults to false)
     indices: false
     # Specifies whether the navigation links for each chapter should be output as collapsible sections using HTML <detail> tags, with chapter headings as <summary> tags (OPTIONAL, defaults to false)
     collapsible: false
     # When collapsible sections are enabled, specifies whether sections are collapsed by default (OPTIONAL, defaults to false)
     collapsed: false
-  # Copyright settings for the page footer (REQUIRED)
-  copyright:
-    # The author for the copyright notice (REQUIRED, supports markdown formatting)
-    author: "Site Author"
-    # The starting year for the copyright notice (REQUIRED)
-    # (The theme will automatically use the current year as the ending year for the copyright notice)
+  copyright: # Copyright settings for the page footer (REQUIRED)
+    author: "Big Mog & Little Mog"
     year: 2025
-    # The license for the copyright notice (OPTIONAL, supports markdown formatting, defaults to "All rights reserved.")
     license: "CC BY 4.0"
   # Override the path to the site's logo image (OPTIONAL, defaults to "/assets/images/logo.svg")
   #logo: "/path/to/logo.png"
@@ -66,7 +51,7 @@ theme-settings:
       #top: "fa-arrow-alt-to-top"
       # Other icon overrides go here (see the full list of supported overrides below)
       # ...
-
+toc: true
 # Configure the permalinks for each category ("chapter" from the theme's perspective)
 collections_dir: #_collections
 collections:
