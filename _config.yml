@@ -1,6 +1,6 @@
 #select theme
-theme: jekyll-text-theme #, just-the-docs, minimal-mistakes-jekyll # for github supported theme, replacing THEME-NAME with the name of the theme as shown in the _config.yml of the theme's repository. 
-#remote_theme: alertbox/bookworm, sighingnow/jekyll-gitbook, jasongrimes/jekyll-chapterbook #for other theme hosted on github, replacing THEME-NAME with the name of the theme as shown in the README of the theme's repository. 
+#theme: jekyll-text-theme #, just-the-docs, minimal-mistakes-jekyll # for github supported theme, replacing THEME-NAME with the name of the theme as shown in the _config.yml of the theme's repository. 
+remote_theme: adamrehn/jekyll-theme-gitbook@v0.0.6 #, alertbox/bookworm, sighingnow/jekyll-gitbook, jasongrimes/jekyll-chapterbook #for other theme hosted on github, replacing THEME-NAME with the name of the theme as shown in the README of the theme's repository. 
 plugins:
   - jekyll-remote-theme
 
@@ -22,3 +22,46 @@ description: "A repository of information" #[A short description of your site's 
 #WHERE "lesson" is a front matter metadata in the page
 
 #just-the-docs supports multiple layouts. modify _layouts/home.html to be a parent layout (like the default layout) to render the markup from the other theme.
+theme-settings:
+  # The name of the Jekyll collection that contains the site's chapters (REQUIRED)
+  collection: "categories"
+  # Navigation menu settings (OPTIONAL, only needed if you want to override the defaults)
+  navigation:
+    # Specifies whether navigation links should be generated for chapter index files that use the `chapter-index` layout (OPTIONAL, defaults to false)
+    indices: false
+    # Specifies whether the navigation links for each chapter should be output as collapsible sections using HTML <detail> tags, with chapter headings as <summary> tags (OPTIONAL, defaults to false)
+    collapsible: false
+    # When collapsible sections are enabled, specifies whether sections are collapsed by default (OPTIONAL, defaults to false)
+    collapsed: false
+  # Copyright settings for the page footer (REQUIRED)
+  copyright:
+    # The author for the copyright notice (REQUIRED, supports markdown formatting)
+    author: "Site Author"
+    # The starting year for the copyright notice (REQUIRED)
+    # (The theme will automatically use the current year as the ending year for the copyright notice)
+    year: 2025
+    # The license for the copyright notice (OPTIONAL, supports markdown formatting, defaults to "All rights reserved.")
+    license: "CC BY 4.0"
+  # Override the path to the site's logo image (OPTIONAL, defaults to "/assets/images/logo.svg")
+  #logo: "/path/to/logo.png"
+  # Override the path to the site's Open Graph image (OPTIONAL, defaults to "/assets/images/opengraph.png")
+  #opengraph: "/path/to/opengraph.png"
+  # Favicon settings (OPTIONAL, only needed if you want to override the defaults)
+  #favicon:
+    # Override the PNG version of the favicon (OPTIONAL, defaults to "/assets/images/favicon.png")
+    #png: "/path/to/favicon.png"
+    # Override the SVG version of the favicon (OPTIONAL, defaults to "/assets/images/favicon.svg")
+    #svg: "/path/to/favicon.svg"
+  # Font Awesome icon settings (OPTIONAL, only needed if you want to override the defaults)
+  #fontawesome:
+    # Specify that you are providing Font Awesome through your own CSS (OPTIONAL, defaults to false)
+    #local: true
+    # Specify a Font Awesome Kit URL to provide icons (OPTIONAL, defaults to none, takes precedence over "local" if both are specified)
+    #kit: "https://kit.fontawesome.com/xxxxxxxxxx.js"
+    # Override individual Font Awesome icons (OPTIONAL, only needed if you want to override the defaults)
+    #icons:
+      # Override the "return to top" icon (OPTIONAL, defaults to "fa-arrow-up")
+      # (Incidentally, if you do have a Font Awesome Pro license then this particular icon override is highly recommended)
+      #top: "fa-arrow-alt-to-top"
+      # Other icon overrides go here (see the full list of supported overrides below)
+      # ...
