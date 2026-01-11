@@ -20,8 +20,9 @@ description: "A repository of information" #[A short description of your site's 
 #  tutorials:
 #    sort_by: lesson
 #WHERE "lesson" is a front matter metadata in the page
-
 #just-the-docs supports multiple layouts. modify _layouts/home.html to be a parent layout (like the default layout) to render the markup from the other theme.
+
+#adamrehn theme config
 theme-settings:
   # The name of the Jekyll collection that contains the site's chapters (REQUIRED)
   collection: "categories"
@@ -65,3 +66,43 @@ theme-settings:
       #top: "fa-arrow-alt-to-top"
       # Other icon overrides go here (see the full list of supported overrides below)
       # ...
+
+# Configure the permalinks for each category ("chapter" from the theme's perspective)
+collections_dir: #_collections
+collections:
+  categories:
+    output: true
+    permalink: /:path
+# Use front matter defaults to supply the metadata for each category
+defaults:
+  -
+    scope:
+      path: ""
+      type: "sections"
+    values:
+      # Use the "default" layout provided by the theme for all pages
+      layout: "default"
+  -
+    scope:
+      # This is the filesystem path for the subdirectory containing the category's pages
+      path: #"_collections/_categories/basic"
+    values:
+      # The chapter name and number are required
+      chapter: "Basic"
+      chapnum: 1
+      # An icon is optional and will be displayed next to the chapter name if specified
+      #icon: "fas fa-school"
+  #-
+    #scope:
+    #  path: "_collections/_categories/intermediate"
+    #values:
+    #  chapter: "Intermediate"
+    #  chapnum: 2
+    #  icon: "fas fa-university"
+  #-
+    #scope:
+    #  path: "_collections/_categories/advanced"
+    #values:
+    #  chapter: "Advanced"
+    #  chapnum: 3
+    #  icon: "fas fa-graduation-cap"
